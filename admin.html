@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Door To Door Fresh Meat - Admin</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f4f4f4;
+}
+
+header{
+    background:#c62828;
+    color:#fff;
+    padding:18px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.container{
+    width:95%;
+    max-width:1200px;
+    margin:20px auto;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.card h2{
+    color:#c62828;
+    margin-bottom:10px;
+    font-size:34px;
+}
+
+.card p{
+    color:#555;
+    font-size:18px;
+}
+
+.table-card{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+
+.table-card h2{
+    margin-bottom:15px;
+    color:#c62828;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#c62828;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+td{
+    border-bottom:1px solid #ddd;
+    padding:12px;
+}
+
+tr:hover{
+    background:#fafafa;
+}
+
+select{
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #bbb;
+}
+
+.loading{
+    text-align:center;
+    padding:40px;
+    color:#666;
+}
+
+.success{
+    background:#2e7d32;
+    color:white;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+    display:none;
+}
+
+.error{
+    background:#c62828;
+    color:white;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+    display:none;
+}
+
+@media(max-width:700px){
+
+table{
+    font-size:13px;
+}
+
+th,td{
+    padding:8px;
+}
+
+header{
+    font-size:20px;
+}
+
+.card h2{
+    font-size:28px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+🥩 Door To Door Fresh Meat Admin Panel
+
+</header>
+
+<div class="container">
+
+<div id="success" class="success"></div>
+
+<div id="error" class="error"></div>
+
+<div class="stats">
+
+<div class="card">
+<h2 id="totalOrders">0</h2>
+<p>Total Orders</p>
+</div>
+
+<div class="card">
+<h2 id="pendingOrders">0</h2>
+<p>Pending Orders</p>
+</div>
+
+<div class="card">
+<h2 id="deliveredOrders">0</h2>
+<p>Delivered Orders</p>
+</div>
+
+<div class="card">
+<h2>₹ <span id="totalSales">0</span></h2>
+<p>Total Sales</p>
+</div>
+
+</div>
+
+<div class="table-card">
+
+<h2>Customer Orders</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Order ID</th>
+<th>Customer</th>
+<th>Phone</th>
+<th>Total</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="orderTable">
+
+<tr>
+
+<td colspan="5" class="loading">
+
+Loading Orders...
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script>
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzS-fgday49ir-iBrjfyg7ZUrgdf7zfFURCVrDqJHQo3mmNCdVpRjRMM_C4WFZIQOKWbQ/exec";
+async function loadOrders() {
+
+    try {
+
+        const response = await fetch(SCRIPT_URL);
+
+        const orders = await response.json();
+
+        renderOrders(orders);
+
+    } catch (err) {
+
+        document.getElementById("error").style.display = "block";
+        document.getElementById("error").innerHTML =
+            "Unable to load orders.";
+
+        console.error(err);
+
+    }
+
+}
+
+function renderOrders(orders) {
+
+    let pending = 0;
+    let delivered = 0;
+    let sales = 0;
+
+    let html = "";
+
+    orders.forEach(order => {
+
+        if (order.status === "Pending")
+            pending++;
+
+        if (order.status === "Delivered")
+            delivered++;
+
+        sales += Number(order.grandTotal);
+
+        html += `
+
+<tr>
+
+<td>${order.orderId}</td>
+
+<td>${order.customerName}</td>
+
+<td>${order.phone}</td>
+
+<td>₹${order.grandTotal}</td>
+
+<td>
+
+<select
+data-id="${order.orderId}"
+onchange="updateStatus(this)">
+
+<option value="Pending"
+${order.status=="Pending"?"selected":""}>
+Pending
+</option>
+
+<option value="Delivered"
+${order.status=="Delivered"?"selected":""}>
+Delivered
+</option>
+
+</select>
+
+</td>
+
+</tr>
+
+`;
+
+    });
+
+    if(html==""){
+
+        html=`
+
+<tr>
+
+<td colspan="5" class="loading">
+
+No Orders Found
+
+</td>
+
+</tr>
+
+`;
+
+    }
+
+    document.getElementById("orderTable").innerHTML = html;
+
+    document.getElementById("totalOrders").innerHTML =
+        orders.length;
+
+    document.getElementById("pendingOrders").innerHTML =
+        pending;
+
+    document.getElementById("deliveredOrders").innerHTML =
+        delivered;
+
+    document.getElementById("totalSales").innerHTML =
+        sales;
+
+}
