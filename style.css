@@ -63,7 +63,8 @@ body{
 .card img{
     width:100%;
     height:340px;
-    object-fit:cover;
+    object-fit:contain;
+    background:#ffffff;
     border-radius:12px;
 }
 
@@ -469,7 +470,7 @@ body{
 
 .footer p {
     margin: 3px 0;
-}
+}.card
 
 
 .footer p {
