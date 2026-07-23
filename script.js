@@ -30,6 +30,15 @@ const products = [
     type:"meal"
 },
   {
+    name: "🌭 Blood & Intestine Sausage",
+    subtitle: "Ready to Eat",
+    pieces: "3 Pieces • 6 Pieces • 9 Pieces",
+    price: 250,
+    image: "Sausage.png",
+    available: false,
+    type: "pack"
+},
+  {
   name: "🫙 Smoked Pork Pickle",
   subtitle: "Ready to Eat",
   pieces: "100g • 200g",
@@ -68,7 +77,10 @@ product.type === "plate"
 ? "/Meal"
 : product.type === "pickle"
 ? "/Jar"
+: product.type === "pack"
+? "/Pack"
 : "/kg"
+
 }</p>
 
 
@@ -88,7 +100,12 @@ ${product.type === "plate" ? `
  `   : product.type === "pickle" ? `
     <option value="100">100g Jar</option>
     <option value="200">200g Jar</option>
+`: product.type === "pack" ? `
+    <option value="1">1 Pack (3 Pieces)</option>
+    <option value="2">2 Packs (6 Pieces)</option>
+    <option value="3">3 Packs (9 Pieces)</option>
 `
+
 : `
     <option value="0.5">0.5 kg</option>
     <option value="1">1 kg</option>
