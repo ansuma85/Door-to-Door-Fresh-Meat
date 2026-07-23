@@ -29,15 +29,17 @@ const products = [
     available:true,
     type:"meal"
 },
-
-
   {
-    name:"Broiler Chicken (Raw)",
-    price:280,
-    image:"https://i.postimg.cc/rygHjyJ9/Chicken-Broiler.jpg",
-    available:false
-  }
+  name: "🫙 Smoked Pork Pickle",
+  subtitle: "Ready to Eat",
+  pieces: "100g • 200g",
+  price: 250,
+  image: "Smoked-Pork-Pickle.png",
+  available: false,
+  type: "pickle"
+},
 ];
+
 const container=document.getElementById("products");
 
 products.forEach(product=>{
