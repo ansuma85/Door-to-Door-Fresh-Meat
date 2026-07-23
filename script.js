@@ -63,7 +63,9 @@ const container=document.getElementById("products");
 products.forEach(product=>{
 container.innerHTML+=`
 <div class="card">
-<img src="${product.image}" alt="${product.name}">
+<img class="${product.type === 'pack' ? 'sausage-img' : 'product-img'}"
+     src="${product.image}"
+     alt="${product.name}">
 <h2>${product.name}</h2>
 
 ${product.subtitle ? `<div style="font-size:15px;color:#1e8e3e;font-weight:bold;">${product.subtitle}</div>` : ""}

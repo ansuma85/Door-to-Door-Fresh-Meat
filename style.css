@@ -61,14 +61,11 @@ body{
 }
 
 .card img{
-    width:92%;
-    height:auto;
-    aspect-ratio:1/1;
-    object-fit:contain;
-    display:block;
-    margin:0 auto;
+    width:100%;
+    height:340px;
+    object-fit:cover;
     border-radius:12px;
-    background:#fff;
+
 
 
 }
@@ -480,4 +477,17 @@ body{
 
 .footer p {
     margin: 5px 0;
+}
+.product-img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.sausage-img{
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    border-radius:12px;
 }
