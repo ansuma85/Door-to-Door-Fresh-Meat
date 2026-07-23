@@ -57,6 +57,8 @@ product.type === "plate"
 ? "Plate"
 : product.type === "meal"
 ? "Meal"
+: product.type === "pickle"
+? ""
 : "kg"
 }</p>
 
