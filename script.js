@@ -74,7 +74,11 @@ ${product.type === "plate" ? `
     <option value="3">3 Meals</option>
     <option value="4">4 Meals</option>
     <option value="5">5 Meals</option>
-` : `
+ `   : product.type === "pickle" ? `
+    <option value="100">100g Jar</option>
+    <option value="200">200g Jar</option>
+`
+: `
     <option value="0.5">0.5 kg</option>
     <option value="1">1 kg</option>
     <option value="1.5">1.5 kg</option>
