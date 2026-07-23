@@ -4,7 +4,7 @@ let orderCounter = 1;
 const products = [
   {
     name:"Smoked Pork (Raw)",
-    price:550,
+    price:600,
     image:"https://i.postimg.cc/QMyQCPkR/Smoked-pork.jpg",
     available:true
   },
@@ -14,7 +14,7 @@ const products = [
     subtitle:"Ready to Eat",
     pieces:"10–12 Pieces / Plate",
     price:100,
-    image:"https://i.postimg.cc/MTc6Fh5t/bamboo-shot.png",
+    image:"bamboo shot.png",
     available:true,
     type:"plate"
   },
@@ -25,7 +25,7 @@ const products = [
     subtitle:"Complete Meal",
     pieces:"🍚 Rice • 🥣 Dal • 🧅 Onion • 🌶️ Chilli • 🍋 Lemon",
     price:150,
-    image:"https://i.postimg.cc/HnpSxCN4/rice-menu.png",
+    image:"rice menu.png",
     available:true,
     type:"meal"
 },
