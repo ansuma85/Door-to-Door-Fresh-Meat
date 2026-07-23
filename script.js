@@ -38,6 +38,15 @@ const products = [
   available: false,
   type: "pickle"
 },
+{
+  name: "🌶️ King Chilly Pickle",
+  subtitle: "Extra Spicy",
+  pieces: "100g • 200g",
+  price: 250,
+  image: "King-Chilly-Pickle.png",
+  available: false,
+  type: "pickle"
+},
 ];
 
 const container=document.getElementById("products");
