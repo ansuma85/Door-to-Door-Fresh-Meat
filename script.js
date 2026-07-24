@@ -39,16 +39,30 @@ const products = [
     type: "pack"
 },
  {
-    name: "Smoked Pork Pickle",
+    name: "Smoked Pork Pickle 100g",
     price: 250,
     image: "Smoked-Pork-Pickle.png",
     available: true,
     type: "pickle"
 },
 {
-    name: "King Chilly Pickle",
+    name: "Smoked Pork Pickle 200g",
+    price: 450,
+    image: "Smoked-Pork-Pickle.png",
+    available: true,
+    type: "pickle"
+},
+{
+    name: "King Chilly Pickle 100g",
     price: 250,
     image: "King-Chilly-Pickle.png",
+    available: true,
+    type: "pickle"
+},
+{
+    name: "King Chilly Pickle 200g",
+    price: 500,
+    image: "King Chilly Pickle.png",
     available: true,
     type: "pickle"
 },
@@ -145,14 +159,14 @@ function addToCart(name, price, qty, type) {
     let finalPrice;
 
     if (type === "pickle") {
-        finalPrice = price;
-    } else {
-        finalPrice = price * parseFloat(qty);
-    }
+    finalPrice = price * parseInt(qty);
+} else {
+    finalPrice = price * parseFloat(qty);
+}
 
     cart.push({
         name: name,
-        qty: parseFloat(qty),
+       qty: parseInt(qty),
         type: type,
         price: finalPrice
     });
@@ -174,7 +188,17 @@ function updateCart() {
             html += `
             <div style="margin-bottom:10px;">
                 <strong>${item.name}</strong><br>
-                ${item.qty} ${item.type=="plate" ? (item.qty==1 ? "Plate" : "Plates") : "kg"} - ₹${item.price}
+                ${item.qty} ${
+    item.type === "plate"
+        ? (item.qty == 1 ? "Plate" : "Plates")
+        : item.type === "meal"
+        ? (item.qty == 1 ? "Meal" : "Meals")
+        : item.type === "pickle"
+        ? (item.qty == 1 ? "Jar" : "Jars")
+        : item.type === "pack"
+        ? (item.qty == 1 ? "Pack" : "Packs")
+        : "kg"
+} - ₹${item.price}
                 <button onclick="removeItem(${index})">❌</button>
             </div>`;
             total += item.price;
