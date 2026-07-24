@@ -150,7 +150,7 @@ ${product.type === "plate" ? `
 
 ${product.available
 ? `<button onclick="addToCart('${product.name}',${product.price},document.getElementById('qty-${product.name}').value,'${product.type}')">Add to Cart</button>`
-: `<button disabled>Out of Stock</button>`}
+: `<button disabled>Coming Soon</button>`}
 </div>`;
 });
 
