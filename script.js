@@ -100,8 +100,8 @@ ${product.type === "plate" ? `
     <option value="4">4 Meals</option>
     <option value="5">5 Meals</option>
  `   : product.type === "pickle" ? `
-    <option value="100">100g Jar</option>
-    <option value="200">200g Jar</option>
+ <option value="1">100g Jar</option>
+ <option value="1">200g Jar</option>
 `: product.type === "pack" ? `
     <option value="1">1 Pack (3 Pieces)</option>
     <option value="2">2 Packs (6 Pieces)</option>
@@ -141,15 +141,25 @@ ${product.available
 </div>`;
 });
 
-function addToCart(name,price,qty,type){
-cart.push({
-    name:name,
-    qty:parseFloat(qty),
-    type:type,
-    price:price*parseFloat(qty)
-});
-updateCart();
-alert(name+" added to cart!");
+function addToCart(name, price, qty, type) {
+
+    let finalPrice;
+
+    if (type === "pickle") {
+        finalPrice = price;
+    } else {
+        finalPrice = price * parseFloat(qty);
+    }
+
+    cart.push({
+        name: name,
+        qty: parseFloat(qty),
+        type: type,
+        price: finalPrice
+    });
+
+    updateCart();
+    alert(name + " added to cart!");
 }
 
 function updateCart() {
@@ -224,6 +234,10 @@ item.type === "plate"
   ? (item.qty == 1 ? "Plate" : "Plates")
   : item.type === "meal"
   ? (item.qty == 1 ? "Meal" : "Meals")
+  : item.type === "pickle"
+  ? "Jar"
+  : item.type === "pack"
+  ? "Pack"
   : "kg"
 }) - ₹${item.price}\n`;
 total+=item.price;
