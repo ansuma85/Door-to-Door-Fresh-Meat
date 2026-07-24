@@ -35,7 +35,7 @@ const products = [
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 250,
     image: "Sausage.png",
-    available: false,
+    available: true,
     type: "pack"
 },
   {
@@ -44,7 +44,7 @@ const products = [
   pieces: "100g • 200g",
   price: 250,
   image: "Smoked-Pork-Pickle.png",
-  available: false,
+  available: true,
   type: "pickle"
 },
 {
@@ -53,7 +53,7 @@ const products = [
   pieces: "100g • 200g",
   price: 250,
   image: "King-Chilly-Pickle.png",
-  available: false,
+  available: true,
   type: "pickle"
 },
 ];
