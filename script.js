@@ -41,7 +41,7 @@ const products = [
  {
     name: "Smoked Pork Pickle 100g",
     price: 250,
-    image: "Smoked-Pork-Pickle.png",
+    image: "smoked pork pickle.png",
     available: true,
     type: "pickle"
 },
@@ -55,7 +55,7 @@ const products = [
 {
     name: "King Chilly Pickle 100g",
     price: 250,
-    image: "King-Chilly-Pickle.png",
+    image: "king chilly pickle.png",
     available: true,
     type: "pickle"
 },
