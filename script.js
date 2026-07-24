@@ -38,22 +38,24 @@ const products = [
     available: true,
     type: "pack"
 },
-  {
-  name: "🫙 Smoked Pork Pickle",
-  subtitle: "Ready to Eat",
-  pieces: "100g • 200g",
+ {
+  name: "Smoked Pork Pickle 100g",
   price: 250,
-  image: "Smoked-Pork-Pickle.png",
-  available: true,
   type: "pickle"
 },
 {
-  name: "🌶️ King Chilly Pickle",
-  subtitle: "Extra Spicy",
-  pieces: "100g • 200g",
+  name: "Smoked Pork Pickle 200g",
+  price: 450,
+  type: "pickle"
+},
+{
+  name: "King Chilly Pickle 100g",
   price: 250,
-  image: "King-Chilly-Pickle.png",
-  available: true,
+  type: "pickle"
+},
+{
+  name: "King Chilly Pickle 200g",
+  price: 500,
   type: "pickle"
 },
 ];
@@ -100,8 +102,11 @@ ${product.type === "plate" ? `
     <option value="4">4 Meals</option>
     <option value="5">5 Meals</option>
  `   : product.type === "pickle" ? `
- <option value="1">100g Jar</option>
- <option value="1">200g Jar</option>
+    <option value="1">1 Jar</option>
+    <option value="2">2 Jars</option>
+    <option value="3">3 Jars</option>
+    <option value="4">4 Jars</option>
+    <option value="5">5 Jars</option>
 `: product.type === "pack" ? `
     <option value="1">1 Pack (3 Pieces)</option>
     <option value="2">2 Packs (6 Pieces)</option>
