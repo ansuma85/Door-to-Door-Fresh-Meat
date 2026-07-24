@@ -62,7 +62,7 @@ const products = [
 {
     name: "King Chilly Pickle 200g",
     price: 500,
-    image: "King Chilly Pickle.png",
+    image: "King-Chilly-Pickle.png",
     available: true,
     type: "pickle"
 },
