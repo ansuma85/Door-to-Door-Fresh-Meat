@@ -39,24 +39,32 @@ const products = [
     type: "pack"
 },
  {
-  name: "Smoked Pork Pickle 100g",
-  price: 250,
-  type: "pickle"
+    name: "Smoked Pork Pickle 100g",
+    price: 250,
+    image: "Smoked-Pork-Pickle.png",
+    available: true,
+    type: "pickle"
 },
 {
-  name: "Smoked Pork Pickle 200g",
-  price: 450,
-  type: "pickle"
+    name: "Smoked Pork Pickle 200g",
+    price: 450,
+    image: "Smoked-Pork-Pickle.png",
+    available: true,
+    type: "pickle"
 },
 {
-  name: "King Chilly Pickle 100g",
-  price: 250,
-  type: "pickle"
+    name: "King Chilly Pickle 100g",
+    price: 250,
+    image: "King-Chilly-Pickle.png",
+    available: true,
+    type: "pickle"
 },
 {
-  name: "King Chilly Pickle 200g",
-  price: 500,
-  type: "pickle"
+    name: "King Chilly Pickle 200g",
+    price: 500,
+    image: "King-Chilly-Pickle.png",
+    available: true,
+    type: "pickle"
 },
 ];
 
