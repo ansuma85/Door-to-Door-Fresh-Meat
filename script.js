@@ -30,7 +30,7 @@ const products = [
     type:"meal"
 },
   {
-    name: "🌭 Blood & Intestine Sausage",
+    name: "🌭 Smoked Pork Sausage",
     subtitle: "Ready to Eat",
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 250,
