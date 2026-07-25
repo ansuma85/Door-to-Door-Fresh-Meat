@@ -179,16 +179,17 @@ function updateCart() {
             html += `
             <div style="margin-bottom:10px;">
                 <strong>${item.name}</strong><br>
-                ${item.qty} ${
-    item.type === "plate"
-        ? (item.qty == 1 ? "Plate" : "Plates")
-        : item.type === "meal"
-        ? (item.qty == 1 ? "Meal" : "Meals")
-        : item.type === "pickle"
-        ? (item.qty == 1 ? "Jar" : "Jars")
-        : item.type === "pack"
-        ? (item.qty == 1 ? "Pack" : "Packs")
-        : "kg"
+               ${
+item.type === "plate"
+? `${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)`
+: item.type === "meal"
+? `${item.qty} ${item.qty == 1 ? "Meal" : "Meals"}`
+: item.type === "pickle"
+? `${item.qty} ${item.qty == 1 ? "Jar" : "Jars"}`
+: item.type === "pack"
+? `${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}`
+: `${item.qty} kg`
+}
 } - ₹${item.price}
                 <button onclick="removeItem(${index})">❌</button>
             </div>`;
