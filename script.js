@@ -179,7 +179,7 @@ function updateCart() {
             html += `
             <div style="margin-bottom:10px;">
                 <strong>${item.name}</strong><br>
-               ${
+${
 item.type === "plate"
 ? `${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)`
 : item.type === "meal"
@@ -189,8 +189,8 @@ item.type === "plate"
 : item.type === "pack"
 ? `${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}`
 : `${item.qty} kg`
-}
 } - ₹${item.price}
+
                 <button onclick="removeItem(${index})">❌</button>
             </div>`;
             total += item.price;
