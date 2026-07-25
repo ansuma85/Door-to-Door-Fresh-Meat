@@ -252,14 +252,13 @@ let qtyText = "";
 
 if (item.type === "plate") {
     qtyText = `${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)`;
-} else if (item.type === "meal") {
-    qtyText = `${item.qty} ${item.qty == 1 ? "Meal" : "Meals"}`;
 } else if (item.type === "pickle") {
     qtyText = `${item.qty} ${item.qty == 1 ? "Jar" : "Jars"}`;
 } else if (item.type === "pack") {
     qtyText = `${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}`;
 } else {
     qtyText = `${item.qty} kg`;
+
 }
 
 message += `• ${item.name} (${qtyText}) - ₹${item.price}\n`;
