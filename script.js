@@ -157,7 +157,7 @@ function addToCart(name, price, qty, type) {
 
     cart.push({
         name: name,
-       qty: parseInt(qty),
+       qty: parseFloat(qty),
         type: type,
         price: finalPrice
     });
