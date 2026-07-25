@@ -3,7 +3,7 @@ let orderCounter = 1;
 
 const products = [
   {
-    name:"Smoked Pork (Raw)",
+    name:"🥩Smoked Pork (Raw)",
     price:600,
     image:"https://i.postimg.cc/QMyQCPkR/Smoked-pork.jpg",
     available:true
@@ -30,28 +30,28 @@ const products = [
     type: "pack"
 },
  {
-    name: "Smoked Pork Pickle 100g",
+    name: "🫙 Smoked Pork Pickle 100g",
     price: 250,
     image: "smoked pork pickle.png",
     available: false,
     type: "pickle"
 },
 {
-    name: "Smoked Pork Pickle 200g",
+    name: "🫙 Smoked Pork Pickle 200g",
     price: 450,
     image: "Smoked-Pork-Pickle.png",
     available: false,
     type: "pickle"
 },
 {
-    name: "King Chilly Pickle 100g",
+    name: "🥵🌶️ King Chilly Pickle 100g",
     price: 250,
     image: "king chilly pickle.png",
     available: false,
     type: "pickle"
 },
 {
-    name: "King Chilly Pickle 200g",
+    name: "🥵🌶️ King Chilly Pickle 200g",
     price: 500,
     image: "King-Chilly-Pickle.png",
     available: false,
