@@ -161,7 +161,7 @@ function addToCart(name, price, qty, type) {
         type: type,
         price: finalPrice
     });
-
+    console.log(cart);
     updateCart();
     alert(name + " added to cart!");
 }
