@@ -278,8 +278,21 @@ window.open("https://wa.me/919678601494?text="+encodeURIComponent(message),"_bla
 const date = new Date().toLocaleString();
 
 let products = "";
+
 cart.forEach(item => {
- products += `${item.name} (${item.qty} ${item.type === "plate" ? (item.qty == 1 ? "Plate" : "Plates") : "kg"}) - ₹${item.price}\n`;
+    let productText = "";
+
+    if (item.type === "plate") {
+        productText = `${item.name} (${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)) - ₹${item.price}`;
+    } else if (item.type === "pickle") {
+        productText = `${item.name} (${item.qty} ${item.qty == 1 ? "Jar" : "Jars"}) - ₹${item.price}`;
+    } else if (item.type === "pack") {
+        productText = `${item.name} (${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}) - ₹${item.price}`;
+    } else {
+        productText = `${item.name} (${item.qty} kg) - ₹${item.price}`;
+    }
+
+    products += productText + "\n";
 });
 
 const itemsTotal = total;
