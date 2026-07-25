@@ -10,24 +10,15 @@ const products = [
   },
 
   {
-    name:"Smoked Pork with Bamboo Shoot",
-    subtitle:"Ready to Eat",
-    pieces:"10–12 Pieces / Plate",
-    price:100,
-    image:"bamboo shot.png",
-    available:true,
-    type:"plate"
-  },
+    
+    name: "🍖 Ready-to-Eat Smoked Pork",
+    subtitle: "1 Plate (150 g)",
+    pieces: "150 g • Freshly Cooked on Order",
+    price: 160,
+    image: "bamboo shot.png",
+    available: true,
+    type: "plate"
 
-  {
-   
-    name:"🍛 Smoked Pork Rice Meal",
-    subtitle:"Complete Meal",
-    pieces:"🍚 Rice • 🥣 Dal • 🧅 Onion • 🌶️ Chilli • 🍋 Lemon",
-    price:150,
-    image:"rice menu.png",
-    available:true,
-    type:"meal"
 },
   {
     name: "🌭 Smoked Pork Sausage",
