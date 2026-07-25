@@ -176,31 +176,34 @@ function updateCart() {
         html = "Your cart is empty.";
     } else {
         cart.forEach((item, index) => {
+
+            let qtyText = "";
+
+            if (item.type === "plate") {
+                qtyText = `${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)`;
+            } else if (item.type === "meal") {
+                qtyText = `${item.qty} ${item.qty == 1 ? "Meal" : "Meals"}`;
+            } else if (item.type === "pickle") {
+                qtyText = `${item.qty} ${item.qty == 1 ? "Jar" : "Jars"}`;
+            } else if (item.type === "pack") {
+                qtyText = `${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}`;
+            } else {
+                qtyText = `${item.qty} kg`;
+            }
+
             html += `
             <div style="margin-bottom:10px;">
                 <strong>${item.name}</strong><br>
-${
-item.type === "plate"
-? `${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)`
-: item.type === "meal"
-? `${item.qty} ${item.qty == 1 ? "Meal" : "Meals"}`
-: item.type === "pickle"
-? `${item.qty} ${item.qty == 1 ? "Jar" : "Jars"}`
-: item.type === "pack"
-? `${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}`
-: `${item.qty} kg`
-} - ₹${item.price}
-
+                ${qtyText} - ₹${item.price}
                 <button onclick="removeItem(${index})">❌</button>
             </div>`;
+
             total += item.price;
         });
     }
 
     document.getElementById("cartItems").innerHTML = html;
     document.getElementById("cartTotal").innerText = total;
-
-  
 
     const grandTotal = total + 20;
     document.getElementById("grandTotal").innerText = grandTotal;
