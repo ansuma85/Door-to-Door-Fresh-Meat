@@ -5,7 +5,7 @@ const products = [
   {
     name:"🥩 Smoked Pork (Raw)",
     price:600,
-    image:"smoked pork.jpeg",
+    image:"Smoked pork.jpeg",
     available:true
   },
 
