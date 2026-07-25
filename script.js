@@ -246,19 +246,25 @@ Address: ${address}
 Order Details:
 `;
 
-cart.forEach(item=>{
-message += `• ${item.name} (${item.qty} ${
-item.type === "plate"
-  ? (item.qty == 1 ? "Plate" : "Plates")
-  : item.type === "meal"
-  ? (item.qty == 1 ? "Meal" : "Meals")
-  : item.type === "pickle"
-  ? "Jar"
-  : item.type === "pack"
-  ? "Pack"
-  : "kg"
-}) - ₹${item.price}\n`;
-total+=item.price;
+cart.forEach(item => {
+
+let qtyText = "";
+
+if (item.type === "plate") {
+    qtyText = `${item.qty} ${item.qty == 1 ? "Plate" : "Plates"} (${item.qty * 150} g)`;
+} else if (item.type === "meal") {
+    qtyText = `${item.qty} ${item.qty == 1 ? "Meal" : "Meals"}`;
+} else if (item.type === "pickle") {
+    qtyText = `${item.qty} ${item.qty == 1 ? "Jar" : "Jars"}`;
+} else if (item.type === "pack") {
+    qtyText = `${item.qty} ${item.qty == 1 ? "Pack" : "Packs"}`;
+} else {
+    qtyText = `${item.qty} kg`;
+}
+
+message += `• ${item.name} (${qtyText}) - ₹${item.price}\n`;
+total += item.price;
+
 });
 
 message += `
