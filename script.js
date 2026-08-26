@@ -30,7 +30,17 @@ const products = [
     available: true,
     type: "pack"
 },
- {
+
+{
+    name: "🌭Chicken Sausage",
+    subtitle: "Ready to Eat",
+    pieces: "3 Pieces • 6 Pieces • 9 Pieces",
+    price: 100,
+    image: "Chicken Sausage.png",
+    available: true,
+    type: "pack"
+},
+{ 
     name: "🫙 Smoked Pork Pickle 100g",
     price: 250,
     image: "smoked pork pickle.png",
