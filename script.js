@@ -22,7 +22,7 @@ const products = [
 
 },
   {
-    name: "🌭 Smoked Pork Sausage",
+    name: "🌭Pork Sausage",
     subtitle: "Ready to Eat",
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 250,
