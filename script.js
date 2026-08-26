@@ -26,7 +26,7 @@ const products = [
     subtitle: "Ready to Eat",
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 250,
-    image: "Smoked pork sausage.png",
+    image: "Pork Sausage.png",
     available: false,
     type: "pack"
 },
