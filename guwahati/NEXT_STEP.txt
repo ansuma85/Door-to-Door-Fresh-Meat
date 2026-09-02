@@ -1,0 +1,4 @@
+Next update:
+- WhatsApp ordering
+- Automatic Order ID
+- Cart clear after order
