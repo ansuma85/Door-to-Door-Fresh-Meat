@@ -17,7 +17,7 @@ const products = [
     pieces: " Freshly Cooked on Order",
     price: 160,
     image: "bamboo shot.png",
-    available: true,
+    available: false,
     type: "plate"
 
 },
@@ -216,7 +216,7 @@ function updateCart() {
     document.getElementById("cartItems").innerHTML = html;
     document.getElementById("cartTotal").innerText = total;
 
-    const grandTotal = total + 20;
+    const grandTotal = total + 50;
     document.getElementById("grandTotal").innerText = grandTotal;
 }
 
@@ -279,12 +279,12 @@ total += item.price;
 
 message += `
 Items Total: ₹${total}
-Delivery Charge: ₹20
-Grand Total: ₹${total + 20}
+Delivery Charge: ₹50
+Grand Total: ₹${total + 50}
 
 Thank you for ordering with  SMOKIE.`;
 
-window.open("https://wa.me/919678601494?text="+encodeURIComponent(message),"_blank");
+window.open("https://wa.me/91 7896007760?text="+encodeURIComponent(message),"_blank");
 
 const date = new Date().toLocaleString();
 
