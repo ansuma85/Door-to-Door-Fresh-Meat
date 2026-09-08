@@ -41,10 +41,10 @@ const products = [
     type: "pack"
 },
 { 
-    name: "🫙 Smoked Pork Pickle 100g",
-    price: 250,
+    name: "🫙pork pickle 150g",
+    price: 200,
     image: "smoked pork pickle.png",
-    available: false,
+    available: true,
     type: "pickle"
 },
 {
