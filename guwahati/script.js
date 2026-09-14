@@ -44,7 +44,7 @@ const products = [
     name: "🫙Pork Pickle 150g",
     price: 200,
     image: "Pork pickle ghy.png",
-    available: true,
+    available: false,
     type: "pickle"
 },
 {
@@ -56,14 +56,14 @@ const products = [
 },
 {
     name: "🥵🌶️ King Chilly Pickle 150g",
-    price: 250,
+    price: 150,
     image: "king chilly pickle ghy.png",
     available: false,
     type: "pickle"
 },
 {
     name: "🫙 Bamboo Shoot Pickle 200g",
-    price: 500,
+    price: 100,
     image: "bamboo shoot pickle ghy.png",
     available: false,
     type: "pickle"
