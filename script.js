@@ -5,7 +5,7 @@ const products = [
   {
     name:"🥩 Smoked Pork (Raw)",
     price:600,
-    image:"Smoked pork.jpeg",
+    image:"smoked pork .jpeg",
     available:true
   },
 
@@ -41,10 +41,10 @@ const products = [
     type: "pack"
 },
 { 
-    name: "🫙 Smoked Pork Pickle 100g",
-    price: 250,
-    image: "smoked pork pickle.png",
-    available: false,
+    name: "🫙Pork pickle 150g",
+    price: 200,
+    image: "pork pickle.png",
+    available: true,
     type: "pickle"
 },
 {
