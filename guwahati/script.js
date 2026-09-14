@@ -26,7 +26,7 @@ const products = [
     subtitle: "Ready to Eat",
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 100,
-    image: "pork sausage ghy",
+    image: "pork sausage ghy.png",
     available: false,
     type: "pack"
 },
@@ -36,35 +36,35 @@ const products = [
     subtitle: "Ready to Eat",
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 100,
-    image: "chicken sausage ghy",
+    image: "chicken sausage ghy.png",
     available: false,
     type: "pack"
 },
 { 
     name: "🫙Pork Pickle 150g",
     price: 200,
-    image: "Pork pickle ghy",
+    image: "Pork pickle ghy.png",
     available: true,
     type: "pickle"
 },
 {
     name: "🫙 Smoked Pork Pickle 150g",
     price: 250,
-    image: "smoked pork pickle ghy",
+    image: "smoked pork pickle ghy.png",
     available: false,
     type: "pickle"
 },
 {
     name: "🥵🌶️ King Chilly Pickle 150g",
     price: 250,
-    image: "king chilly pickle ghy",
+    image: "king chilly pickle ghy.png",
     available: false,
     type: "pickle"
 },
 {
-    name: "🥵🌶️ Bamboo Shoot Pickle 200g",
+    name: "🫙 Bamboo Shoot Pickle 200g",
     price: 500,
-    image: "bamboo shoot pickle ghy",
+    image: "bamboo shoot pickle ghy.png",
     available: false,
     type: "pickle"
 },
