@@ -10,18 +10,6 @@ const products = [
   },
 
   {
-    
-    name: "🍖 Smoked Pork with Bamboo Shoot",
-    
-    subtitle: "Ready-to-Eat • 1 Plate (150 g)",
-    pieces: " Freshly Cooked on Order",
-    price: 160,
-    image: "bamboo shot.png",
-    available: false,
-    type: "plate"
-
-},
-  {
     name: "🌭Pork Sausage",
     subtitle: "Ready to Eat",
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
