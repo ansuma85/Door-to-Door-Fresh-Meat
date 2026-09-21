@@ -65,7 +65,7 @@ const products = [
     name: "🫙 Bamboo Shoot Pickle 200g",
     price: 100,
     image: "Bamboo shoot pickle.png",
-    available: false,
+    available: true,
     type: "pickle"
 },
 ];
