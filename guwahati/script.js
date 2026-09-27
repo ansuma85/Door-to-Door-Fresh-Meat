@@ -4,7 +4,7 @@ let orderCounter = 1;
 const products = [
   {
     name:"🥩 Smoked Pork (Raw)",
-    price:700,
+    price:750,
     image:"smoked pork .jpeg",
     available:true
   },
