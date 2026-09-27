@@ -27,7 +27,7 @@ const products = [
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 100,
     image: "Pork Sausage.png",
-    available: true,
+    available: false,
     type: "pack"
 },
 
@@ -37,7 +37,7 @@ const products = [
     pieces: "3 Pieces • 6 Pieces • 9 Pieces",
     price: 100,
     image: "Chicken Sausage.png",
-    available: true,
+    available: false,
     type: "pack"
 },
 { 
