@@ -5,8 +5,9 @@ const products = [
   {
     name:"🥩 Smoked Pork (Raw)",
     price:600,
-    image:"smoked pork .jpeg",
-    available:true
+    image: "smoked pork .jpeg",
+    available: true,
+    type: "weight"
   },
 
   {
@@ -124,26 +125,8 @@ ${product.type === "plate" ? `
 `
 
 : `
-    <option value="0.5">0.5 kg</option>
-    <option value="1">1 kg</option>
-    <option value="1.5">1.5 kg</option>
-    <option value="2">2 kg</option>
-    <option value="2.5">2.5 kg</option>
-    <option value="3">3 kg</option>
-    <option value="3.5">3.5 kg</option>
-    <option value="4">4 kg</option>
-    <option value="4.5">4.5 kg</option>
-    <option value="5">5 kg</option>
-    <option value="5.5">5.5 kg</option>
-    <option value="6">6 kg</option>
-    <option value="6.5">6.5 kg</option>
-    <option value="7">7 kg</option>
-    <option value="7.5">7.5 kg</option>
-    <option value="8">8 kg</option>
-    <option value="8.5">8.5 kg</option>
-    <option value="9">9 kg</option>
-    <option value="9.5">9.5 kg</option>
-    <option value="10">10 kg</option>
+   <option value="0.5">500g</option>
+   <option value="0.8">800g</option>
 `}
 </select>
 
@@ -160,7 +143,16 @@ function addToCart(name, price, qty, type) {
 
     let finalPrice;
 
-    if (type === "pickle") {
+   if (name.includes("Smoked Pork (Raw)")) {
+    if (parseFloat(qty) === 0.5) {
+        finalPrice = 350;
+    } else if (parseFloat(qty) === 0.8) {
+        finalPrice = 600;
+    } else {
+        alert("Please select a valid pack size.");
+        return;
+    }
+} else if (type === "pickle") {
     finalPrice = price * parseInt(qty);
 } else {
     finalPrice = price * parseFloat(qty);
