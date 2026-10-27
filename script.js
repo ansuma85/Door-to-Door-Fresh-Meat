@@ -86,7 +86,7 @@ ${product.subtitle ? `<div style="font-size:15px;color:#1e8e3e;font-weight:bold;
 ${product.pieces ? `<div style="font-size:14px;font-weight:bold;color:#444;">${product.pieces}</div>` : ""}
 
 
-<p>${
+<p style="color:#228B22; font-weight:bold; font-size:24px;">${
     product.type === "weight"
     ? "500g — ₹350 | 800g — ₹600"
     : `₹${product.price}${
