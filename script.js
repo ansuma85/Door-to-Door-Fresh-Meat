@@ -68,19 +68,20 @@ ${product.subtitle ? `<div style="font-size:15px;color:#1e8e3e;font-weight:bold;
 ${product.pieces ? `<div style="font-size:14px;font-weight:bold;color:#444;">${product.pieces}</div>` : ""}
 
 
-<p style="font-weight:bold; font-size:24px;">
-  ${
+${
     product.type === "weight"
-      ? '<span style="color:#228B22;">500g</span> <span style="color:#C62828;">— ₹350</span> | <span style="color:#228B22;">800g</span> <span style="color:#C62828;">— ₹600</span>'
-      : `<span style="color:#C62828;">₹${product.price}${
-          product.type === "plate" ? "/Plate"
-          : product.type === "meal" ? "/Meal"
-          : product.type === "pickle" ? "/Jar"
-          : product.type === "pack" ? "/Pack"
-          : "/kg"
-        }</span>`
-  }
-</p>
+    ? `<div style="font-weight:bold;font-size:24px;">
+         <div><span style="color:#228B22;">500g</span> <span style="color:#C62828;">— ₹350</span></div>
+         <div><span style="color:#228B22;">800g</span> <span style="color:#C62828;">— ₹600</span></div>
+       </div>`
+    : `<p style="font-weight:bold;font-size:24px;color:#C62828;">₹${product.price}${
+        product.type === "plate" ? "/Plate"
+        : product.type === "meal" ? "/Meal"
+        : product.type === "pickle" ? "/Jar"
+        : product.type === "pack" ? "/Pack"
+        : "/kg"
+    }</p>`
+}
 
 
 <select id="qty-${product.name}">
