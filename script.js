@@ -22,25 +22,7 @@ const products = [
     type: "plate"
 
 },
-  {
-    name: "🌭Pork Sausage",
-    subtitle: "Ready to Eat",
-    pieces: "3 Pieces • 6 Pieces • 9 Pieces",
-    price: 100,
-    image: "Pork Sausage.png",
-    available: false,
-    type: "pack"
-},
 
-{
-    name: "🌭Chicken Sausage",
-    subtitle: "Ready to Eat",
-    pieces: "3 Pieces • 6 Pieces • 9 Pieces",
-    price: 100,
-    image: "Chicken Sausage.png",
-    available: false,
-    type: "pack"
-},
 { 
     name: "🫙Pork pickle 150g",
     price: 200,
