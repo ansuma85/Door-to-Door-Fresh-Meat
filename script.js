@@ -85,16 +85,21 @@ ${product.subtitle ? `<div style="font-size:15px;color:#1e8e3e;font-weight:bold;
 
 ${product.pieces ? `<div style="font-size:14px;font-weight:bold;color:#444;">${product.pieces}</div>` : ""}
 
-<p>₹${product.price}${
-product.type === "plate"
-? "/Plate"
-: product.type === "meal"
-? "/Meal"
-: product.type === "pickle"
-? "/Jar"
-: product.type === "pack"
-? "/Pack"
-: "/kg"
+
+<p>${
+    product.type === "weight"
+    ? "500g — ₹350 | 800g — ₹600"
+    : `₹${product.price}${
+        product.type === "plate"
+        ? "/Plate"
+        : product.type === "meal"
+        ? "/Meal"
+        : product.type === "pickle"
+        ? "/Jar"
+        : product.type === "pack"
+        ? "/Pack"
+        : "/kg"
+    }`
 
 }</p>
 
