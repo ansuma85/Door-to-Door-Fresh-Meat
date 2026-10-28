@@ -204,7 +204,7 @@ function updateCart() {
     document.getElementById("cartItems").innerHTML = html;
     document.getElementById("cartTotal").innerText = total;
 
-    const grandTotal = total + 50;
+    const grandTotal = total;
     document.getElementById("grandTotal").innerText = grandTotal;
 }
 
