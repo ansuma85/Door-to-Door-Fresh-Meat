@@ -193,8 +193,8 @@ function updateCart() {
     document.getElementById("cartItems").innerHTML = html;
     document.getElementById("cartTotal").innerText = total;
 
-    const grandTotal = total + 20;
-    document.getElementById("grandTotal").innerText = grandTotal;
+   const grandTotal = total;
+document.getElementById("grandTotal").innerText = grandTotal + " + Delivery";
 }
 
 function removeItem(index){
@@ -256,10 +256,11 @@ total += item.price;
 
 message += `
 Items Total: ₹${total}
-Delivery Charge: ₹20
-Grand Total: ₹${total + 20}
+Delivery Charges: Apply based on distance.
+Final delivery fee will be confirmed on WhatsApp.
+Grand Total: ₹${total} + Delivery
 
-Thank you for ordering with  SMOKIE.`;
+Thank you for ordering with SMOKIE.`;
 
 window.open("https://wa.me/919678601494?text="+encodeURIComponent(message),"_blank");
 
