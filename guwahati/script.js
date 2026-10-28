@@ -267,8 +267,9 @@ total += item.price;
 
 message += `
 Items Total: ₹${total}
-Delivery Charge: ₹50
-Grand Total: ₹${total + 50}
+Delivery Charges: Apply based on distance.
+Final delivery fee will be confirmed on WhatsApp.
+Grand Total: ₹${total} + Delivery
 
 Thank you for ordering with  SMOKIE.`;
 
