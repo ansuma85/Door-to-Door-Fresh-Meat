@@ -285,8 +285,8 @@ cart.forEach(item => {
 });
 
 const itemsTotal = total;
-const deliveryCharge = 20;
-const grandTotal = itemsTotal + deliveryCharge;
+const deliveryCharge = "To be confirmed";
+const grandTotal = itemsTotal;
 
 fetch("https://script.google.com/macros/s/AKfycbzS-fgday49ir-iBrjfyg7ZUrgdf7zfFURCVrDqJHQo3mmNCdVpRjRMM_C4WFZIQOKWbQ/exec", {
   method: "POST",
