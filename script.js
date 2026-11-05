@@ -71,7 +71,7 @@ ${product.pieces ? `<div style="font-size:14px;font-weight:bold;color:#444;">${p
 ${
     product.type === "weight"
     ? `<div style="font-weight:bold;font-size:24px;">
-         <div><span style="color:#228B22;">500g</span> <span style="color:#C62828;">— ₹350</span></div>
+         <div><span style="color:#228B22;">400g</span> <span style="color:#C62828;">— ₹300</span></div>
          <div><span style="color:#228B22;">800g</span> <span style="color:#C62828;">— ₹600</span></div>
        </div>`
     : `<p style="font-weight:bold;font-size:24px;color:#C62828;">₹${product.price}${
