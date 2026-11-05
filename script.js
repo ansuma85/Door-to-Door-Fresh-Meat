@@ -110,7 +110,7 @@ ${product.type === "plate" ? `
 `
 
 : `
-   <option value="0.5">500g</option>
+   <option value="0.4">400g</option>
    <option value="0.8">800g</option>
 `}
 </select>
@@ -129,8 +129,8 @@ function addToCart(name, price, qty, type) {
     let finalPrice;
 
    if (name.includes("Smoked Pork (Raw)")) {
-    if (parseFloat(qty) === 0.5) {
-        finalPrice = 350;
+    if (parseFloat(qty) === 0.4) {
+        finalPrice = 300;
     } else if (parseFloat(qty) === 0.8) {
         finalPrice = 600;
     } else {
