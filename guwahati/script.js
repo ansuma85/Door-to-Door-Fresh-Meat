@@ -93,8 +93,10 @@ ${product.type === "plate" ? `
     <option value="3">3 Packs (9 Pieces)</option>
 `
 
-: `
-    <option value="0.5">0.5 kg</option>
+ : product.name.includes("Smoked Pork (Raw)") ? `
+    <option value="0.4">400g</option>
+    <option value="0.8">800g</option>
+` : `
     <option value="1">1 kg</option>
     <option value="1.5">1.5 kg</option>
     <option value="2">2 kg</option>
@@ -130,8 +132,17 @@ function addToCart(name, price, qty, type) {
 
     let finalPrice;
 
-    if (type === "pickle") {
+   if (type === "pickle") {
     finalPrice = price * parseInt(qty);
+} else if (name.includes("Smoked Pork (Raw)")) {
+    if (parseFloat(qty) === 0.4) {
+        finalPrice = 350;
+    } else if (parseFloat(qty) === 0.8) {
+        finalPrice = 700;
+    } else {
+        alert("Please select a valid pack size.");
+        return;
+    }
 } else {
     finalPrice = price * parseFloat(qty);
 }
