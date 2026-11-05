@@ -55,7 +55,11 @@ ${product.subtitle ? `<div style="font-size:15px;color:#1e8e3e;font-weight:bold;
 ${product.pieces ? `<div style="font-size:14px;font-weight:bold;color:#444;">${product.pieces}</div>` : ""}
 
 <p>${product.name.includes("Smoked Pork (Raw)")
-?  "400g - &#8377;350 | 800g - &#8377;700"
+? `<span style="color:#218838;font-weight:bold;font-size:28px;">400g</span>
+   <span style="color:#C62828;font-weight:bold;font-size:28px;">— &#8377;350</span>
+   <br>
+   <span style="color:#218838;font-weight:bold;font-size:28px;">800g</span>
+   <span style="color:#C62828;font-weight:bold;font-size:28px;">— &#8377;700</span>`
 : `₹${product.price}${product.type === "plate"
 ? "/Plate"
 : product.type === "meal"
