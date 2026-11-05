@@ -11,10 +11,10 @@ const products = [
 
 {
    
-    name: "🫙Pork Pickle 150g",
-    price: 200,
+    name: "🫙Pork Pickle 100g",
+    price: 150,
     image: "Pork pickle ghy.png",
-    available: false,
+    available: true,
     type: "pickle"
 },
 {
@@ -35,7 +35,7 @@ const products = [
     name: "🫙 Bamboo Shoot Pickle 200g",
     price: 100,
     image: "bamboo shoot pickle ghy.png",
-    available: false,
+    available: true,
     type: "pickle"
 },
 ];
